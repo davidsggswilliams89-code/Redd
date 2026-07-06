@@ -552,144 +552,253 @@ Category Image
 /* =========================================================  
 END OF SECTION 03 CSS  
 ========================================================= */  
-/* =========================================================  
-SECTION 04  
-QUIZ BANNER LIST CSS  
-========================================================= */  
+/* =========================================================
+SECTION 04
+TRENDING QUIZZES CSS
+========================================================= */
+
+.trending-quizzes{
+
+    width:100%;
+
+    padding:16px 15px 30px;
+
+}
+
+.trending-quizzes .section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:14px;
+
+}
+
+.trending-quizzes .section-header h2{
+
+    font-size:16px;
+
+    font-weight:800;
+
+    color:#FFFFFF;
+
+    letter-spacing:.3px;
+
+}
+
+.trending-quizzes .section-header a{
+
+    color:#F59E0B;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.quiz-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#171C2F;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:18px;
+
+    padding:12px;
+
+    margin-bottom:12px;
+
+    transition:.25s ease;
+
+}
+
+.quiz-card:hover{
+
+    transform:translateY(-2px);
+
+    background:#1E2744;
+
+}
+
+.quiz-number{
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    background:#2D3656;
+
+    color:#FFFFFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+
+}
+
+.gold{
+
+    background:#F4B400;
+
+    color:#111111;
+
+}
+
+.silver{
+
+    background:#C0C0C0;
+
+    color:#111111;
+
+}
+
+.bronze{
+
+    background:#CD7F32;
+
+}
+
+.quiz-thumb{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+}
+
+.quiz-details{
+
+    flex:1;
+
+}
+
+.quiz-details h3{
+
+    color:#FFFFFF;
+
+    font-size:14px;
+
+    margin-bottom:5px;
+
+    font-weight:700;
+
+}
+
+.quiz-details span{
+
+    color:#9CA3AF;
+
+    font-size:11px;
+
+}
+
+.play-btn{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:10px 18px;
+
+    background:linear-gradient(135deg,#FF9D00,#FFB800);
+
+    color:#FFFFFF;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.play-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 15px rgba(255,157,0,.35);
+
+}
+
+.play-btn:active{
+
+    transform:scale(.96);
+
+}
+
+@media(max-width:600px){
+
+.quiz-card{
+
+gap:10px;
+
+padding:10px;
+
+}
+
+.quiz-thumb{
+
+width:56px;
+
+height:56px;
+
+}
+
+.quiz-details h3{
+
+font-size:13px;
+
+}
+
+.play-btn{
+
+padding:8px 14px;
+
+font-size:11px;
+
+}
+
+}
+
+/* =========================================================
+END OF SECTION 04 CSS
+========================================================= */
+
   
-/* ===========================  
-Quiz List Section  
-=========================== */  
   
-.quiz-list-section{  
-  
-    width:100%;  
-  
-    padding:10px 15px 30px;  
-  
-}  
-  
-/* ===========================  
-Header  
-=========================== */  
-  
-.quiz-list-header{  
-  
-    display:flex;  
-  
-    justify-content:space-between;  
-  
-    align-items:center;  
-  
-    margin-bottom:10px;  
-  
-}  
-  
-/* ===========================  
-Section Title  
-=========================== */  
-  
-.quiz-list-title{  
-  
-    font-size:14px;  
-  
-    font-weight:800;  
-  
-    color:#FFFFFF;  
-  
-    letter-spacing:.3px;  
-  
-}  
-  
-/* ===========================  
-Quiz Banner List  
-=========================== */  
-  
-.quiz-banner-list{  
-  
-    display:flex;  
-  
-    flex-direction:column;  
-  
-    gap:10px;  
-  
-}  
-/* ===========================  
-Banner Card  
-=========================== */  
-  
-.quiz-banner-card{  
-  
-    display:block;  
-  
-    width:100%;  
-  
-    height:77px;  
-  
-    overflow:hidden;  
-  
-    border-radius:6px;  
-  
-    background:#111827;  
-  
-    text-decoration:none;  
-  
-    transition:transform .25s ease;  
-  
-    box-shadow:0 4px 12px rgba(0,0,0,.25);  
-  
-}  
-  
-/* ===========================  
-Banner Hover  
-=========================== */  
-  
-.quiz-banner-card:hover{  
-  
-    transform:translateY(-2px);  
-  
-}  
-  
-/* ===========================  
-Banner Image  
-=========================== */  
-  
-.quiz-banner-card img{  
-  
-    width:100%;  
-  
-    height:100%;  
-  
-    display:block;  
-  
-    object-fit:cover;  
-  
-    border-radius:6px;  
-  
-    user-select:none;  
-  
-    -webkit-user-drag:none;  
-  
-}  
-  
-/* ===========================  
-Banner Active  
-=========================== */  
-  
-.quiz-banner-card:active{  
-  
-    transform:scale(.98);  
-  
-}  
-  
-/* =========================================================  
-END OF SECTION 04 CSS  
-========================================================= */  
-  
-  
-  
-  
-</style>  </head>  <body>  <!-- =========================================================  
+</style>  
+</head>  
+ <body> 
+ <!-- =========================================================  
 SECTION 01  
 QUIZCANO HEADER HTM HTML HTML HTML HTML HTML  
 ========================================================= -->  <header class="top-header">  <!-- Left Menu -->  
@@ -872,113 +981,220 @@ Horizontal Category Scroll
 
 </section>  <!-- =========================================================  
 END OF SECTION 03 HTML  
-========================================================= -->  <!-- =========================================================  
-SECTION 04  
-QUIZ BANNER LIST HTML  
-========================================================= -->  <section class="quiz-list-section">  <!-- ==========================  
-Section Header  
-=========================== -->  
+========================================================= -->
 
-<div class="quiz-list-header">  
+<!-- =========================================================
+SECTION 04
+TRENDING QUIZZES
+========================================================= -->
 
-    <h2 class="quiz-list-title">  
-        🎯 Popular Quizzes  
-    </h2>  
+<section class="trending-quizzes">
 
-</div>  
+    <div class="section-header">
 
-<!-- ==========================  
-Quiz Banner List  
-=========================== -->  
+        <h2>🔥 Trending Quizzes</h2>
 
-<div class="quiz-banner-list">  
+        <a href="#">View All</a>
 
-    <!-- Quiz Banner 01 -->  
+    </div>
 
-    <a href="quiz.html" class="quiz-banner-card">  
+    <!-- Quiz 1 -->
 
-        <img src="quiz1.jpg"  
-             alt="Quiz Banner 1">  
+    <div class="quiz-card">
 
-    </a>  
+        <div class="quiz-number gold">1</div>
 
-    <!-- Quiz Banner 02 -->  
+        <img src="FindtheHiddenWord.png"
+             class="quiz-thumb"
+             alt="Find The Hidden Word">
 
-    <a href="quiz.html" class="quiz-banner-card">  
+        <div class="quiz-details">
 
-        <img src="quiz2.jpg"  
-             alt="Quiz Banner 2">  
+            <h3>Find The Hidden Word</h3>
 
-    </a>  
+            <span>👥 34,956,120 Players</span>
 
-    <!-- Quiz Banner 03 -->  
+        </div>
 
-    <a href="quiz.html" class="quiz-banner-card">  
+        <button class="play-btn"
+                onclick="window.location.href='quiz.html?category=hiddenword'">
 
-        <img src="quiz3.jpg"  
-             alt="Quiz Banner 3">  
+            PLAY
 
-    </a>  
+        </button>
 
-    <!-- Quiz Banner 04 -->  
+    </div>
 
-    <a href="quiz.html" class="quiz-banner-card">  
+    <!-- Quiz 2 -->
 
-        <img src="quiz4.jpg"  
-             alt="Quiz Banner 4">  
+    <div class="quiz-card">
 
-    </a>  
+        <div class="quiz-number silver">2</div>
 
-    <!-- Quiz Banner 05 -->  
+        <img src="FindtheNumber.png"
+             class="quiz-thumb"
+             alt="Find The Number">
 
-    <a href="quiz.html" class="quiz-banner-card">  
+        <div class="quiz-details">
 
-        <img src="quiz5.jpg"  
-             alt="Quiz Banner 5">  
+            <h3>Find The Number</h3>
 
-    </a>  
+            <span>👥 31,752,840 Players</span>
 
-    <!-- Quiz Banner 06 -->  
+        </div>
 
-    <a href="quiz.html" class="quiz-banner-card">  
+        <button class="play-btn"
+                onclick="window.location.href='quiz.html?category=number'">
 
-        <img src="quiz6.jpg"  
-             alt="Quiz Banner 6">  
+            PLAY
 
-    </a>  
+        </button>
 
-    <!-- Quiz Banner 07 -->  
+    </div>
 
-    <a href="quiz.html" class="quiz-banner-card">  
+    <!-- Quiz 3 -->
 
-        <img src="quiz7.jpg"  
-             alt="Quiz Banner 7">  
+    <div class="quiz-card">
 
-    </a>  
+        <div class="quiz-number bronze">3</div>
 
-    <!-- Quiz Banner 08 -->  
+        <img src="General.png"
+             class="quiz-thumb"
+             alt="Science Challenge">
 
-    <a href="quiz.html" class="quiz-banner-card">  
+        <div class="quiz-details">
 
-        <img src="quiz8.jpg"  
-             alt="Quiz Banner 8">  
+            <h3>Science Challenge</h3>
 
-    </a>  
+            <span>👥 29,635,201 Players</span>
 
-    <!-- Quiz Banner 09 -->  
+        </div>
 
-    <a href="quiz.html" class="quiz-banner-card">  
+        <button class="play-btn"
+                onclick="window.location.href='quiz.html?category=science'">
 
-        <img src="quiz9.jpg"  
-             alt="Quiz Banner 9">  
+            PLAY
 
-    </a>  
+        </button>
 
-</div>
+    </div>
 
-</section>  <!-- =========================================================  
-END OF SECTION 04 HTML  
-========================================================= -->   <script>  
+    <!-- Quiz 4 -->
+
+    <div class="quiz-card">
+
+        <div class="quiz-number">4</div>
+
+        <img src="General.png"
+             class="quiz-thumb"
+             alt="Geography Master">
+
+        <div class="quiz-details">
+
+            <h3>Geography Master</h3>
+
+            <span>👥 27,900,451 Players</span>
+
+        </div>
+
+        <button class="play-btn"
+                onclick="window.location.href='quiz.html?category=geography'">
+
+            PLAY
+
+        </button>
+
+    </div>
+
+    <!-- Quiz 5 -->
+
+    <div class="quiz-card">
+
+        <div class="quiz-number">5</div>
+
+        <img src="General.png"
+             class="quiz-thumb"
+             alt="Math Genius">
+
+        <div class="quiz-details">
+
+            <h3>Math Genius</h3>
+
+            <span>👥 25,381,441 Players</span>
+
+        </div>
+
+        <button class="play-btn"
+                onclick="window.location.href='quiz.html?category=math'">
+
+            PLAY
+
+        </button>
+
+    </div>
+
+    <!-- Quiz 6 -->
+
+    <div class="quiz-card">
+
+        <div class="quiz-number">6</div>
+
+        <img src="General.png"
+             class="quiz-thumb"
+             alt="Mind Genius">
+
+        <div class="quiz-details">
+
+            <h3>Mind Genius</h3>
+
+            <span>👥 18,250,940 Players</span>
+
+        </div>
+
+        <button class="play-btn"
+                onclick="window.location.href='quiz.html?category=mind'">
+
+            PLAY
+
+        </button>
+
+    </div>
+
+    <!-- Quiz 7 -->
+
+    <div class="quiz-card">
+
+        <div class="quiz-number">7</div>
+
+        <img src="General.png"
+             class="quiz-thumb"
+             alt="Image Identification">
+
+        <div class="quiz-details">
+
+            <h3>Image Identification</h3>
+
+            <span>👥 15,511,441 Players</span>
+
+        </div>
+
+        <button class="play-btn"
+                onclick="window.location.href='quiz.html?category=image'">
+
+            PLAY
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+END OF SECTION 04
+========================================================= -->
+
+
+
   
 /* =========================================================  
 SECTION 02  
@@ -1181,61 +1397,33 @@ if(categoryCards.length>0){
 /* =========================================================  
 END OF SECTION 03 JAVASCRIPT  
 ========================================================= */  
-/* =========================================================  
-SECTION 04  
-QUIZ BANNER LIST JAVASCRIPT  
-========================================================= */  
-  
-/* ===========================  
-Quiz Banner Variables  
-=========================== */  
-  
-const quizBannerCards =  
-document.querySelectorAll(".quiz-banner-card");  
-  
-/* ===========================  
-Banner Click Event  
-=========================== */  
-  
-quizBannerCards.forEach(function(card){  
-  
-    card.addEventListener("click",function(event){  
-  
-        event.preventDefault();  
-  
-        /* ===========================  
-        Get Selected Category  
-        =========================== */  
-  
-        const category =  
-  
-        card.dataset.category;  
-  
-        console.log(  
-  
-            "Selected Category:",  
-  
-            category  
-  
-        );  
-  
-        /* ===========================  
-        Open Quiz Page  
-        =========================== */  
-  
-        window.location.href =  
-  
-        "quiz.html?category=" +  
-  
-        encodeURIComponent(category);  
-  
-    });  
-  
-});  
-  
-/* =========================================================  
-END OF SECTION 04 JAVASCRIPT  
-========================================================= */  
+/* =========================================================
+SECTION 04
+QUIZ BANNER LIST JAVASCRIPT
+========================================================= */
+
+/* ===========================
+Quiz Banner Variables
+=========================== */
+
+const quizBannerCards =
+document.querySelectorAll(".quiz-banner-card");
+
+/* ===========================
+Banner Click Event
+=========================== */
+
+quizBannerCards.forEach(function(card){
+
+    ...
+});
+
+/* =========================================================
+END OF SECTION 04 JAVASCRIPT
+========================================================= */
+
+
+      
 /* =========================================================  
 HIDDEN ADMIN LOGIN  
 QUIZCANO LOGO (7 CLICKS)  
