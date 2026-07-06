@@ -1397,58 +1397,50 @@ if(categoryCards.length>0){
 END OF SECTION 03 JAVASCRIPT  
 ========================================================= */  
 
-/* =========================================================  
-HIDDEN ADMIN LOGIN  
-QUIZCANO LOGO (7 CLICKS)  
-========================================================= */  
-  
-/* ===========================  
-Logo Element  
-=========================== */  
-  
-const gameIcon =  
-document.getElementById("gameIcon");  
-  
-/* ===========================  
-Click Counter  
-=========================== */  
-  
-let adminClickCount = 0;  
-  
-let adminClickTimer = null;  
-  
-/* ===========================  
-Hidden Admin Login  
-=========================== */  
-  
-gameIcon.addEventListener("click",function(){  
-  
-    adminClickCount++;  
-  
-    clearTimeout(adminClickTimer);  
-  
-    adminClickTimer = setTimeout(function(){  
-  
-        adminClickCount = 0;  
-  
-    },3000);  
-  
-    if(adminClickCount === 7){  
-  
-        adminClickCount = 0;  
-  
-        window.location.href =  
-        "login.html";  
-  
-    }  
-  
-});  
-  
-/* =========================================================  
-END OF HIDDEN ADMIN LOGIN  
-========================================================= */  
-  
-       
- </script> 
+/* =========================================================
+HIDDEN ADMIN LOGIN
+========================================================= */
+
+gameIcon.addEventListener("click", function () {
+
+    adminClickCount++;
+
+    clearTimeout(adminClickTimer);
+
+    adminClickTimer = setTimeout(function () {
+        adminClickCount = 0;
+    }, 3000);
+
+    if (adminClickCount === 7) {
+
+        adminClickCount = 0;
+
+        window.location.href = "login.html";
+
+    }
+
+});
+
+/* =========================================================
+END OF HIDDEN ADMIN LOGIN
+========================================================= */
+
+
+/* =========================================================
+PAGE INITIALIZATION
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    showSlide(0);
+
+    if (categoryCards.length > 0) {
+        categoryCards[0].classList.add("active");
+        loadCategory(categoryCards[0].getAttribute("data-category"));
+    }
+
+});
+
+</script>
  </body>  
 </html> 
